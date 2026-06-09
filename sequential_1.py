@@ -57,5 +57,6 @@ nn_model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
                  loss='binary_crossentropy',
                  metrics=['accuracy'])
 history=nn_model.fit(x_train,y_train,epochs=100,batch_size=32,validation_split=0.2,verbose=0)
+nn_model.summary()
 plot_loss(history)
 plot_accuracy(history)
